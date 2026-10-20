@@ -1,33 +1,6 @@
 {
-  "cleanUrls": true,
-  "rewrites": [
-    {
-      "source": "/regia",
-      "destination": "/index.html"
-    },
-    {
-      "source": "/live",
-      "destination": "/index.html"
-    }
-  ],
   "headers": [
-    {
-      "source": "/squadre.xlsx",
-      "headers": [
-        {
-          "key": "Cache-Control",
-          "value": "no-store, max-age=0"
-        }
-      ]
-    },
-    {
-      "source": "/(.*)",
-      "headers": [
-        {
-          "key": "Cache-Control",
-          "value": "no-cache"
-        }
-      ]
-    }
+    { "source": "/squadre.xlsx", "headers": [{ "key": "Cache-Control", "value": "no-store, max-age=0" }] },
+    { "source": "/", "headers": [{ "key": "Cache-Control", "value": "no-cache" }] }
   ]
 }
